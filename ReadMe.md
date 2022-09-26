@@ -1,0 +1,1 @@
+This is a demo web api who implements a RESTFull API of a moovie storage. In this project it was used MySql as database , EF CORE as ORM and .NET 6 environmet to develop the API.
