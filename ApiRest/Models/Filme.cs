@@ -12,5 +12,10 @@ namespace ApiRest.Models
 
         [Required( ErrorMessage = "Campo obrigatório")]
         public DateTime Data {get; set;}
+
+        [Required(ErrorMessage = "Campo obrigatório")]
+        public Diretor diretor {get; set;}
+
+        public int IdDiretor {get; set;}
     }
 }
