@@ -29,9 +29,6 @@ namespace ApiRest.Controllers
 
         [HttpGet]
         public IActionResult retornaFilmes(){
-            var connect = Environment.GetEnvironmentVariable("CONNECTION");
-
-            Console.WriteLine(connect);
             return Ok(_context.Filmes);
         }
 

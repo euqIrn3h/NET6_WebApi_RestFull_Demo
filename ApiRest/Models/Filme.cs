@@ -14,7 +14,7 @@ namespace ApiRest.Models
         public DateTime Data {get; set;}
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        public Diretor diretor {get; set;}
+        public virtual Diretor diretor {get; set;}
 
         public int IdDiretor {get; set;}
     }
