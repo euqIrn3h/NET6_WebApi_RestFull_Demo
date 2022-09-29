@@ -10,6 +10,7 @@ namespace ApiRest.Profiles
         {
             CreateMap<Diretor, ReadDiretorDto>();
             CreateMap<CreateDiretorDto, Diretor>();
+            CreateMap<UpdateDiretorDto, Diretor>();
         }
     }
 }

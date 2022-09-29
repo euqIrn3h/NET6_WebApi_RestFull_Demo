@@ -7,6 +7,11 @@ namespace ApiRest.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder){
+            builder.Entity<Filme>()
+                .HasOne( filme => filme.Diretor)
+                .WithMany( diretor => diretor.Filmes)
+                .HasForeignKey( filme => filme.IdDiretor)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<Filme> Filmes {get; set;}

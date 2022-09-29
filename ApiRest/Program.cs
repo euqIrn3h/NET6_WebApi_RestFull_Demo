@@ -9,8 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 Env.Variaveis();
 var connect = Environment.GetEnvironmentVariable("CONNECTION");
 
-Console.WriteLine(connect);
-
 //Add services to the container.
 
 builder.Services.AddControllers();
