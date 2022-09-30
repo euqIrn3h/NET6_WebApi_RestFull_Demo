@@ -10,12 +10,12 @@ namespace ApiRest.Models
         [StringLength(20)]
         public string Titulo {get; set;} 
 
-        [Required( ErrorMessage = "Campo obrigatório")]
-        public DateTime Data {get; set;}
-
         [Required(ErrorMessage = "Campo obrigatório")]
+        public int IdDiretor {get; set;}
+       
         public virtual Diretor Diretor {get; set;}
 
-        public int IdDiretor {get; set;}
+        public virtual List<Sessao> Sessoes {get; set;}
+  
     }
 }
