@@ -12,8 +12,8 @@ namespace ApiRest.Models
         [Required]
         public int IdFilme {get; set;}
 
-        public virtual List<Filme> Filmes {get; set;}
+        public virtual Filme Filme {get; set;}
 
-        public virtual List<Cinema> Cinemas {get; set;}
+        public virtual Cinema Cinema {get; set;}
     }
 }
