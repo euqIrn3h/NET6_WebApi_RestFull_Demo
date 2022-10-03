@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
 namespace ApiRest.Models
 {
     public class Filme
@@ -12,10 +14,7 @@ namespace ApiRest.Models
 
         [Required(ErrorMessage = "Campo obrigatório")]
         public int IdDiretor {get; set;}
-       
         public virtual Diretor Diretor {get; set;}
-
-        public virtual List<Sessao> Sessoes {get; set;}
   
     }
 }

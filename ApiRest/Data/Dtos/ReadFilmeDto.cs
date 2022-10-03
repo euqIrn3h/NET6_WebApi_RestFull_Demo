@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using ApiRest.Models;
 
 namespace ApiRest.Data.Dtos
 {
@@ -10,7 +11,6 @@ namespace ApiRest.Data.Dtos
 
         [Required( ErrorMessage = "Campo obrigatório")]
         public DateTime Data {get; set;}
-
-        public DateTime DataConsulta {get; set;}
+        public virtual Diretor Diretor {get; set;}
     }
 }

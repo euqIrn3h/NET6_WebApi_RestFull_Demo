@@ -19,7 +19,7 @@ namespace ApiRest.Controllers
 
         [HttpGet]
         public IActionResult getDiretor(){
-            return Ok(_context.Diretores);
+            return Ok( _context.Diretores);
         }
 
         [HttpGet("{id}")]

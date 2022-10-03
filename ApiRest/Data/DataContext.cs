@@ -14,8 +14,8 @@ namespace ApiRest.Data
                 .OnDelete(DeleteBehavior.Cascade);
         }
 
-        public DbSet<Filme> Filmes {get; set;}
-        public DbSet<Diretor> Diretores {get; set;}
+        public DbSet<Filme>? Filmes {get; set;}
+        public DbSet<Diretor>? Diretores {get; set;}
 
     }
 }

@@ -16,9 +16,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<DataContext>(
-    opt => {
-    opt.UseMySql(connect, ServerVersion.AutoDetect(connect));
-});
+    opt =>
+    opt.UseLazyLoadingProxies().UseMySql(connect, ServerVersion.AutoDetect(connect))
+);
 
 var app = builder.Build();
 
