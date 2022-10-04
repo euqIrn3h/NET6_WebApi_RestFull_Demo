@@ -14,6 +14,7 @@ namespace ApiRest.Models
 
         [Required(ErrorMessage = "Campo obrigatório")]
         public int IdDiretor {get; set;}
+        [JsonIgnore]
         public virtual Diretor Diretor {get; set;}
   
     }
