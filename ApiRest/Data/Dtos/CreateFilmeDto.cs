@@ -13,5 +13,6 @@ namespace ApiRest.Data.Dtos
         public DateTime Data {get; set;}
         [Required(ErrorMessage = "Campo obrigatório")]
         public int IdDiretor {get; set;}
+        public int ClassificacaoIndicativa {get; set;}
     }
 }

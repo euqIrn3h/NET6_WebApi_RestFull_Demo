@@ -28,8 +28,16 @@ namespace ApiRest.Controllers
         }
 
         [HttpGet]
-        public IActionResult retornaFilmes(){
-            return Ok(_context.Filmes);
+        public IActionResult retornaFilmes([FromQuery] string? titulo, int? classificacaoIndicativa = null){
+            var query = from filmes in _context.Filmes select filmes;
+
+            if(!string.IsNullOrEmpty(titulo)){
+                query = query.Where(filmes =>  filmes.Titulo.Contains(titulo));
+            }
+            if(classificacaoIndicativa != null)
+                query = query.Where(filmes => filmes.ClassificacaoIndicativa <= classificacaoIndicativa);
+
+            return Ok( query.ToList());
         }
 
         [HttpGet("{id}")]

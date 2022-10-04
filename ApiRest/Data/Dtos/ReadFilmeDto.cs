@@ -11,6 +11,7 @@ namespace ApiRest.Data.Dtos
 
         [Required( ErrorMessage = "Campo obrigatório")]
         public DateTime Data {get; set;}
+        public int ClassificacaoIndicativa {get; set;}
         public virtual Diretor Diretor {get; set;}
     }
 }
