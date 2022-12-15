@@ -2,16 +2,16 @@ This is a demo web api who implements a RESTFull API of a moovie storage. In thi
 
 To Migrate the database you need to set the /Env/Env.cs file with this code
 
-using System;
-namespace ApiRest.Env
-{
-    public static class Env
+    using System;
+    namespace ApiRest.Env
     {
-        public static void Variaveis(){
-            Environment.SetEnvironmentVariable("CONNECTION", "Server= YourServer; Port= YourPort; Database= YourDatabase; Uid= YourLogin; Pwd= YourPassword;");
+        public static class Env
+        {
+            public static void Variaveis(){
+                Environment.SetEnvironmentVariable("CONNECTION", "Server= YourServer; Port= YourPort; Database= YourDatabase; Uid= YourLogin; Pwd= YourPassword;");
+            }
         }
     }
-}
 
 and then type o CLI
 
